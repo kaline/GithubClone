@@ -8,11 +8,12 @@ Frontendjr Challenge from Resolvvi
 
 
 <p>Aqui na Resolvvi, temos a missão de empoderar os consumidoresbrasileiros através da tecnologia e somos apaixonados por isso. Visando simular onosso dia a dia de trabalho, queremos que você desenvolva um WebAppseguindo as instruções abaixo:</p>
-  ### Prazo:
+
+  #### Prazo:
   ● 48h corridas após o envio do e-mail
   Desafio:
   ● Use suas habilidades para criar um novo Github.
-  Utilizando ReactJScom Material UI, juntamente com a API GraphQL do Github,construa a página de perfil do usuário. A página deve conter osdados do perfil e a aba de     #### listagem de repositórios.
+  Utilizando ReactJScom Material UI, juntamente com a API GraphQL do Github,construa a página de perfil do usuário. A página deve conter osdados do perfil e a aba de     listagem de repositórios.
   ● Sua aplicação deve exibir o perfil do usuário utilizando a seguinterota /:nome_usuario que pode ser substituída por qualquerusuário válido do Github.
   ● Hospede seu repositório no Github ou Gitlab
   ● Faça o deploy da aplicação para o Amazon S3.
