@@ -5,10 +5,6 @@ import { useQuery } from "@apollo/react-hooks";
 import Avatar from "@material-ui/core/Avatar";
 import MyRepositoryComponent from "./MyRepositoryComponent";
 
-const client = new ApolloClient({
-  uri: "https://api.github.com/graphql",
-});
-
 const USER = gql`
   query($number_of_repos: Int!, $user_name: String!) {
     user(login: $user_name) {
