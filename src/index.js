@@ -3,11 +3,9 @@ import MyUserComponent from './Components/MyUserComponent';
 import ReactDOM from 'react-dom';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from '@apollo/react-hooks';
-import { gql } from 'apollo-boost';
-import { useQuery } from '@apollo/react-hooks';
 import App from './App';
 
-let token = "a23bdfde3a6ef2c1ab5d82d3a6af230e6177c17c"
+let token = "44c05b1983f8713b18970b8aaa8aa70e6efbe3c7"
 
 const client = new ApolloClient({
   uri: 'https://api.github.com/graphql',
