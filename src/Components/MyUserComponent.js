@@ -11,20 +11,15 @@ import { Card } from '@material-ui/core';
 import MyRepositoryComponent from './MyRepositoryComponent'
 
 
-let token = "a23bdfde3a6ef2c1ab5d82d3a6af230e6177c17c"
-
 const client = new ApolloClient({
   uri: 'https://api.github.com/graphql',
-  headers: {
-    Authorization: `Bearer ${token}`,
-  },
+ 
 });
 
 
 const USER = gql`
-
-query($number_of_repos:Int!) {
-  viewer {
+query($number_of_repos:Int!, $user_name:String!) {
+  user(login: $user_name) {
     url
     avatarUrl
     name
@@ -53,9 +48,14 @@ query($number_of_repos:Int!) {
 `;
 
 const MyUserComponent = () => {
+if(window.location.pathname == "/"){
+  window.location.pathname = "/kaline";
+}
+
   const { loading, error, data } = useQuery(USER, {
     variables: {
-      "number_of_repos": 100
+      "number_of_repos": 100,
+      "user_name": window.location.pathname.substring(1)
     },
   });
 
@@ -67,8 +67,8 @@ const MyUserComponent = () => {
   }
 
   if (data) {
-    const { viewer } = data;
-    const elements =  viewer.repositories.nodes;
+    const { user } = data;
+    const elements =  user.repositories.nodes;
 
     const items = [];
 
@@ -79,14 +79,14 @@ const MyUserComponent = () => {
     return (
       <div>
         <section id="profileData">
-        <Avatar id="profileImage" src= { viewer.avatarUrl } >K</Avatar>
-         <h1><a href={viewer.url}>{ viewer.login}</a></h1>
-         <p>{ viewer.name }</p>
-         <p>{ viewer.bio }</p>
-         <p>{ viewer.company }</p>
-         <p>{ viewer.location }</p>
-         <p>@{ viewer.twitterUsername }</p>
-         <p>{ viewer.email }</p>
+        <Avatar id="profileImage" src= { user.avatarUrl } >K</Avatar>
+         <h1><a href={user.url}>{ user.login}</a></h1>
+         <p>{ user.name }</p>
+         <p>{ user.bio }</p>
+         <p>{ user.company }</p>
+         <p>{ user.location }</p>
+         <p>@{ user.twitterUsername }</p>
+         <p>{ user.email }</p>
         </section>
         
 
