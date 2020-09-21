@@ -23,8 +23,12 @@ Frontendjr Challenge from Resolvvi
   ● README.md bem elaborado no repositório do seu código fonte
   #### Regras:
   ● Escreva testes
+  <br />
   ● Não faça commits após o prazo
-  ● Escreva as mensagens de seus commits em inglêsEntrega:
+  <br />
+  ● Escreva as mensagens de seus commits em inglês
+  
+  #### Entrega:
   ● Responda o nosso e-mail com os links do repositório e da aplicaçãohospedada no Amazon S3.
   #### Referências:
   - Link da API do Github:https://docs.github.com/en/graphqlDocumentação 
